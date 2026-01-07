@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .Container {
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            display: flex;      
+            justify-content: center;
+            align-items: center;
+            background-color: lightgrey;
+        }
+        .Ball {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-name: jump;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes jump {
+            0% {
+                transform: translateY(0);
+                background-color: orange;
+            }
+            50% {
+                transform: translateY(-150px);
+                background-color: yellow;
+            }
+            100% {
+                transform: translateY(0);
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="Container">
+    <div class="Ball">
+        <h2>INDIA vs PAKISTAN</h2>
+    </div>
+</div>    
+</body>
+</html>
