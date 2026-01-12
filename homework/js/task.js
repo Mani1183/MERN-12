@@ -140,7 +140,7 @@
 // let n = 5;
 // let fact = 1;
 // for (let i = 1; i <= n; i++) {
-//   fact *= i;
+//   fact = fact * i;
 // }
 // console.log(fact);
 
@@ -149,7 +149,7 @@
 // let n = 5;
 // let sum = 0;
 // for (let i = 1; i <= n; i++) {
-//   sum += i;
+//   sum = sum + i;
 // }
 // console.log(sum);
 
@@ -202,7 +202,7 @@
 // let sum = 0;
 // while (num > 0) {
 //     let digit = num % 10;
-//     sum += digit;
+//     sum = sum + digit;
 //     num = Math.floor(num / 10);
 // }
 // console.log(sum);
@@ -213,26 +213,26 @@
 // for (let i = 1; i <= n; i++) {
 //     let row = '';
 //     for (let j = 1; j <= n - i; j++) {
-//         row += '*';
+//         row = row +'*';
 //     }
 //     console.log(row);
 // }
 
 // Task 10: Check Prime Number
 
-let num = 5;
-let isPrime = true;
-for (let i = 2; i <= Math.sqrt(num); i++) {
-    if (num % i === 0) {
-        isPrime = false;
-        break;
-    }
-}
-if (isPrime && num > 1) {
-    console.log("Prime Number");
-} else {
-    console.log("Not a Prime Number");
-}  
+// let num = 5;
+// let isPrime = true;
+// for (let i = 2; i <= Math.sqrt(num); i++) {
+//     if (num % i === 0) {
+//         isPrime = false;
+//         break;
+//     }
+// }
+// if (isPrime && num > 1) {
+//     console.log("Prime Number");
+// } else {
+//     console.log("Not a Prime Number");
+// }  
 
 
 
