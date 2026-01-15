@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        // let Promise1 = Promise.reject("data not found");
+        // // console.log(Promise);
+        // Promise1.then(() => console.log("good"))
+        //  .catch((err) => console.log(err))
+        //  .finally(() => console.log("done"));
+
+
+      let p1 = Promise.reject("data 1 not found");
+      let p2 = Promise.resolve("data 2 found");
+      let p3 = Promise.resolve("data 3 found");
+
+      Promise.any([p1, p2, p3])
+        .then((data) => {
+          console.log("Promise.any result:", data); 
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      function makeMaggi() {
+        return Promise.resolve("Maggi process started");
+      }
+      function waterBoil() {
+        return Promise.resolve("Water boiled");
+      }
+      function addmasala() {
+        return Promise.resolve("Masala added");
+      }
+      function serving() {
+        return Promise.resolve("Serving Maggi");
+      }
+
+      makeMaggi()
+        .then(() => waterBoil())
+        .then(() => addmasala())
+        .then(() => serving())
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+
+    </script>
+</body>
+</html>
